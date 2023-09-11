@@ -26,23 +26,30 @@ struct TotalContestScreen: View {
             totalPrizes: Entry(value: "$20,00"),
             totalEntries: EntryWithLink(value: "9,995", link: "https://example.com/contest/5678EFGH/entries")
         ),
-//        TotalContestElement(
-//            contestID: EntryWithLink(value: "5679EFGH", link: "https://example.com/contest/5678EFGH"),
-//            entryFees: Entry(value: "$10"),
-//            entryLimit: Entry(value: "4"),
-//            totalPrizes: Entry(value: "$20"),
-//            totalEntries: EntryWithLink(value: "9,935", link: "https://example.com/contest/5678EFGH/entries")
-//        ),
-//        TotalContestElement(
-//            contestID: EntryWithLink(value: "5688EFGH", link: "https://example.com/contest/5678EFGH"),
-//            entryFees: Entry(value: "$3"),
-//            entryLimit: Entry(value: "10"),
-//            totalPrizes: Entry(value: "$20,10"),
-//            totalEntries: EntryWithLink(value: "9,195", link: "https://example.com/contest/5678EFGH/entries")
-//        ),
+        TotalContestElement(
+            contestID: EntryWithLink(value: "5679EFGH", link: "https://example.com/contest/5678EFGH"),
+            entryFees: Entry(value: "$10"),
+            entryLimit: Entry(value: "4"),
+            totalPrizes: Entry(value: "$20"),
+            totalEntries: EntryWithLink(value: "9,935", link: "https://example.com/contest/5678EFGH/entries")
+        ),
+        TotalContestElement(
+            contestID: EntryWithLink(value: "5688EFGH", link: "https://example.com/contest/5678EFGH"),
+            entryFees: Entry(value: "$3"),
+            entryLimit: Entry(value: "10"),
+            totalPrizes: Entry(value: "$20,10"),
+            totalEntries: EntryWithLink(value: "9,195", link: "https://example.com/contest/5678EFGH/entries")
+        ),
         // Add more test data here
     ]
 
+    private var gridItemLayout = [
+        GridItem(.flexible(), spacing: 0),
+        GridItem(.flexible(), spacing: 0),
+        GridItem(.flexible(), spacing: 0),
+        GridItem(.flexible(), spacing: 0),
+        GridItem(.flexible(), spacing: 0),
+    ]
     
     var body: some View {
         
@@ -55,24 +62,37 @@ struct TotalContestScreen: View {
                 .font(.subheadline)
                 .padding()
         
+            ScrollView {
+                    LazyVGrid(columns: gridItemLayout, spacing: 0) {
+                        
+                        // Headers
+                        ForEach(0..<headers.count, id: \.self) { columnIndex in
+                            TableItem(text: headers[columnIndex])
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(.gray)
+                        }
+                        
+                        // Contents
+                        ForEach(contestList.indices, id: \.self) { index in
+                            let item = contestList[index]
+                                
+                            Group{
+                                TableItem(text: item.contestID.value)
+                                TableItem(text: item.entryFees.value)
+                                TableItem(text: item.entryLimit.value)
+                                TableItem(text: item.totalPrizes.value)
+                                TableItem(text: item.totalEntries.value)
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .background(index % 2 == 0 ? Color.black : Color.gray)
+                            
+                        }
+                    }
+                }
             
             Spacer()
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
-    }
-}
-
-struct TableCellView: View {
-    var content: String
-    var isEvenRow: Bool
-    
-    var body: some View {
-        Text(content)
-            .font(.system(size: 14))
-            .multilineTextAlignment(.center)
-            .foregroundColor(.white)
-            .padding(.vertical, 10)
-            .background(isEvenRow ? Color.black : Color.gray)
     }
 }
 
@@ -84,7 +104,6 @@ struct TableItem: View {
             .multilineTextAlignment(.center)
             .foregroundColor(.white)
             .padding(.vertical, 15)
-            //.padding(.horizontal, 5)
     }
 }
 

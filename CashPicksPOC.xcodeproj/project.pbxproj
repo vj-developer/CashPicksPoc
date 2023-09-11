@@ -21,8 +21,6 @@
 		C0DCADD22AA85ADF00049D9D /* TotalContest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADD12AA85ADF00049D9D /* TotalContest.swift */; };
 		C0DCADD42AA85B8D00049D9D /* TotalContestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADD32AA85B8D00049D9D /* TotalContestScreen.swift */; };
 		C0DCADD82AA85BE800049D9D /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADD72AA85BE800049D9D /* Toolbar.swift */; };
-		C0DCADDB2AA86B4A00049D9D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADDA2AA86B4A00049D9D /* HeaderView.swift */; };
-		C0DCADDD2AA86BC600049D9D /* DataRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADDC2AA86BC600049D9D /* DataRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +59,6 @@
 		C0DCADD12AA85ADF00049D9D /* TotalContest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalContest.swift; sourceTree = "<group>"; };
 		C0DCADD32AA85B8D00049D9D /* TotalContestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalContestScreen.swift; sourceTree = "<group>"; };
 		C0DCADD72AA85BE800049D9D /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
-		C0DCADDA2AA86B4A00049D9D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		C0DCADDC2AA86BC600049D9D /* DataRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,11 +198,10 @@
 		C0DCADCB2AA859E200049D9D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C0EF05822AAEEC7F0048FB08 /* Toolbar */,
 				C0A1E5D52AAB1D0900EBCE48 /* CustomCornerRadius */,
 				C0A1E5D22AAB063700EBCE48 /* TabView */,
 				C0A1E5CB2AAAFD7B00EBCE48 /* WebView */,
-				C0DCADD92AA86B2600049D9D /* TableView */,
-				C0DCADD72AA85BE800049D9D /* Toolbar.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -235,13 +230,12 @@
 			path = Contest;
 			sourceTree = "<group>";
 		};
-		C0DCADD92AA86B2600049D9D /* TableView */ = {
+		C0EF05822AAEEC7F0048FB08 /* Toolbar */ = {
 			isa = PBXGroup;
 			children = (
-				C0DCADDA2AA86B4A00049D9D /* HeaderView.swift */,
-				C0DCADDC2AA86BC600049D9D /* DataRowView.swift */,
+				C0DCADD72AA85BE800049D9D /* Toolbar.swift */,
 			);
-			path = TableView;
+			path = Toolbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,12 +373,10 @@
 				C0DCADD42AA85B8D00049D9D /* TotalContestScreen.swift in Sources */,
 				C0A1E5CD2AAAFD8F00EBCE48 /* WebView.swift in Sources */,
 				C0A1E5D12AAAFFD900EBCE48 /* Constant.swift in Sources */,
-				C0DCADDD2AA86BC600049D9D /* DataRowView.swift in Sources */,
 				C0DCADA22AA8579900049D9D /* ContentView.swift in Sources */,
 				C0DCADA02AA8579900049D9D /* CashPicksPOCApp.swift in Sources */,
 				C0DCADD82AA85BE800049D9D /* Toolbar.swift in Sources */,
 				C0DCADD22AA85ADF00049D9D /* TotalContest.swift in Sources */,
-				C0DCADDB2AA86B4A00049D9D /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
