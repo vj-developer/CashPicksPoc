@@ -21,6 +21,10 @@
 		C0DCADD22AA85ADF00049D9D /* TotalContest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADD12AA85ADF00049D9D /* TotalContest.swift */; };
 		C0DCADD42AA85B8D00049D9D /* TotalContestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADD32AA85B8D00049D9D /* TotalContestScreen.swift */; };
 		C0DCADD82AA85BE800049D9D /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DCADD72AA85BE800049D9D /* Toolbar.swift */; };
+		EDC80EF92AAF332D00867CC2 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC80EF82AAF332D00867CC2 /* BottomTabView.swift */; };
+		EDC80EFC2AAF33A600867CC2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC80EFB2AAF33A600867CC2 /* HomeScreen.swift */; };
+		EDC80EFF2AAF37CA00867CC2 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC80EFE2AAF37CA00867CC2 /* Dashboard.swift */; };
+		EDC80F022AAF386800867CC2 /* Topbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC80F012AAF386800867CC2 /* Topbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		C0DCADD12AA85ADF00049D9D /* TotalContest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalContest.swift; sourceTree = "<group>"; };
 		C0DCADD32AA85B8D00049D9D /* TotalContestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalContestScreen.swift; sourceTree = "<group>"; };
 		C0DCADD72AA85BE800049D9D /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
+		EDC80EF82AAF332D00867CC2 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
+		EDC80EFB2AAF33A600867CC2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		EDC80EFE2AAF37CA00867CC2 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		EDC80F012AAF386800867CC2 /* Topbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +197,12 @@
 		C0DCADCA2AA859CF00049D9D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EDC80F002AAF384D00867CC2 /* Topbar */,
+				EDC80EFD2AAF37B200867CC2 /* Dashboard */,
+				EDC80EFA2AAF339600867CC2 /* Home */,
 				C0DCADCB2AA859E200049D9D /* Common */,
 				C0DCADCC2AA859E900049D9D /* TotalContests */,
+				EDC80EF82AAF332D00867CC2 /* BottomTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +248,30 @@
 				C0DCADD72AA85BE800049D9D /* Toolbar.swift */,
 			);
 			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		EDC80EFA2AAF339600867CC2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDC80EFB2AAF33A600867CC2 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EDC80EFD2AAF37B200867CC2 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EDC80EFE2AAF37CA00867CC2 /* Dashboard.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		EDC80F002AAF384D00867CC2 /* Topbar */ = {
+			isa = PBXGroup;
+			children = (
+				EDC80F012AAF386800867CC2 /* Topbar.swift */,
+			);
+			path = Topbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,12 +407,16 @@
 				C0A1E5D42AAB089A00EBCE48 /* TabView.swift in Sources */,
 				C0A1E5D72AAB1D3100EBCE48 /* CustomCornerRadius.swift in Sources */,
 				C0DCADD42AA85B8D00049D9D /* TotalContestScreen.swift in Sources */,
+				EDC80EF92AAF332D00867CC2 /* BottomTabView.swift in Sources */,
+				EDC80EFC2AAF33A600867CC2 /* HomeScreen.swift in Sources */,
 				C0A1E5CD2AAAFD8F00EBCE48 /* WebView.swift in Sources */,
 				C0A1E5D12AAAFFD900EBCE48 /* Constant.swift in Sources */,
 				C0DCADA22AA8579900049D9D /* ContentView.swift in Sources */,
 				C0DCADA02AA8579900049D9D /* CashPicksPOCApp.swift in Sources */,
 				C0DCADD82AA85BE800049D9D /* Toolbar.swift in Sources */,
+				EDC80EFF2AAF37CA00867CC2 /* Dashboard.swift in Sources */,
 				C0DCADD22AA85ADF00049D9D /* TotalContest.swift in Sources */,
+				EDC80F022AAF386800867CC2 /* Topbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

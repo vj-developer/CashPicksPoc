@@ -14,4 +14,10 @@ struct Constants {
         let APPLE = URL(string:"https://www.apple.com/in/")
         let MICROSOFT = URL(string:"https://www.microsoft.com/en-in")
     }
+    
+    struct COLORS {
+        let PRIMARY_GREEN = "PrimaryGreen"
+        let ACCENT = "Accent"
+        let GREY = "Grey"
+    }
 }
